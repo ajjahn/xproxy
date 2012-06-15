@@ -12,9 +12,7 @@ module XProxy
       uri = nil
       each do |match_path, options|
         match_path = normalize_path(match_path)
-        
-        puts request_path
-        
+                
         if request_path.start_with?(match_path)
           request.path = options[:include_match] ? request.path : strip_match(request.path, match_path)
           uri = translate_uri(URI(options[:to]), request)
