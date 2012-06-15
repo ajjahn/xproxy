@@ -7,7 +7,7 @@ module XProxy
       def initialize(app, &block)
         @app = app
         @map = XProxy::Map.new
-        @map.instance_exec(&block)
+        @map.instance_exec(&block) if block_given?
       end
 
       def call(env)
