@@ -18,4 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake'
   
   gem.add_dependency 'rack', '~> 1.4.1'
+  gem.add_dependency 'rackheader', '~> 0.0.1'
+  gem.add_dependency 'rackproxy', '~> 0.0.2'
 end
